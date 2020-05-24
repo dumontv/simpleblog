@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'posts#index'
+  root 'posts#index' , as: 'home'
 
-  get 'about', to: 'pages#about'
+  get 'about', to: 'pages#about', as: 'about'
 
   resources :posts
 end
