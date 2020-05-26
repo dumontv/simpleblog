@@ -1,0 +1,21 @@
+<h1>Add Profile</h1>
+<%= form_for :profile, url: profiles_path do |f| %>
+  <% if @profile.errors.any? %>
+    <% @profile.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+  <p>
+    <%= f.label :username%><br>
+    <%= f.text_field :username, {:class => 'form-control'}%>
+  </p>
+
+  <p>
+    <%= f.label :avatar%><br>
+    <%= f.text_field :avatar, {:class => 'form-control'}%>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-primary'})%>
+  </p>
+<% end %>

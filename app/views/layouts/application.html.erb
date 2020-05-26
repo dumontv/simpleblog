@@ -19,11 +19,14 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto" style="">
          <li><%= link_to "Home", home_path %></li>
         </ul>
-        <ul class="navbar-nav navbar-right">
+        <ul class="navbar-nav mr-auto" style="">
          <li><%= link_to "Create Post", new_post_path %></li>
+        </ul>
+        <ul class="navbar-nav navbar-right">
+         <li><%= link_to "Profiles", profiles_path %></li>
         </ul>
       </div>
     </nav>

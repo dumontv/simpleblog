@@ -1,0 +1,13 @@
+<h1>All Profiles</h1>
+<%= link_to "Create New Profile", new_profile_path %>
+<% @profiles.each do |profile| %>
+  <div class="card card-body bg-light">
+    <h3><%= profile.username %></h3>
+    <img src="<%= profile.avatar %>" width="100" height="100">
+    <p></p>
+    <div>
+      <%= link_to "Edit", edit_profile_path(profile), :class => 'btn btn-primary' %>
+      <%= link_to "Delete", profile_path(profile), method: :delete, data: {confirm: 'Are you sure?'}, :class => 'btn btn-danger' %>
+    </div>
+  </div>
+<% end %>
